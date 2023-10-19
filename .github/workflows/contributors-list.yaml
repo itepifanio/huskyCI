@@ -2,13 +2,14 @@ name: Update Contributors List
 
 on:
   pull_request:
-    branches:
-      - main
+#    branches:
+#      - main
+  push:
 
 jobs:
   update-contributors:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    #if: github.event.pull_request.merged == true
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
